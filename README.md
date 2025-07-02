@@ -3,14 +3,14 @@
 A full-stack analytics platform for competitive programmers.  
 Analyze your Codeforces profile, visualize strengths and weaknesses, track your activity streaks, and receive smart problem recommendations tailored to your performance.
 
-![Dashboard Preview](your-screenshot-link-here)
+
 
 ---
 
 ## 🚀 Live Demo
 
-🌐 **Frontend:** [https://your-frontend-url.com](https://your-frontend-url.com)  
-🔗 **Backend API:** [https://your-backend-url.com/api/user/tourist](https://your-backend-url.com/api/user/tourist)
+🌐 **Frontend:** [https://your-frontend-url.com](https://cf-visual-coach-9yz1-fyoxu2o6o-vivek-c-ks-projects.vercel.app/)  
+🔗 **Backend API:** [https://your-backend-url.com/api/user/tourist](https://cf-visual-coach.onrender.com/api/user/tourist)
 
 ---
 
@@ -73,3 +73,10 @@ Returns:
     ...
   }
 }
+
+```
+## 🧑‍💻 Author
+### Vivek C K
+🎓 Electrical Engineering Undergraduate
+🔗 GitHub: https://github.com/Kaltroniz
+📫 Email: vivekck7404@gmail.com
