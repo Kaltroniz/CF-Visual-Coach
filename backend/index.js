@@ -41,6 +41,9 @@ app.get('/api/user/:handle', async (req, res) => {
         weekOfYear: data.weekOfYear
       })
     );
+    console.log('Sample heatmap data:', 
+  Object.entries(heatmapData).slice(0, 5)
+);
 
     res.json({
       ...stats,

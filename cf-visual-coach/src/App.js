@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Container, Box, CircularProgress, Alert, Typography, Grid } from '@mui/material';
 
 import HandleForm from './components/HandleForm';
@@ -9,6 +9,7 @@ import CalendarHeatmap from './components/CalendarHeatmap';
 import Recommendations from './components/Recommendations';
 import { fetchUserStats } from './services/api';
 import Header from './components/Header';
+import ActivityCalendar from './components/CalendarHeatmap';
 
 function App() {
   const [handle, setHandle] = useState('');
@@ -31,6 +32,25 @@ function App() {
       setLoading(false);
     }
   };
+    const normalizedHeatmapData = useMemo(() => {
+    if (!stats?.heatmapData) return {};
+    
+    // If backend returns array instead of object
+    if (Array.isArray(stats.heatmapData)) {
+      const obj = {};
+      stats.heatmapData.forEach(item => {
+        if (item && item.date) {
+          obj[item.date] = {
+            solved: item.solved,
+            attempts: item.attempts
+          };
+        }
+      });
+      return obj;
+    }
+    
+    return stats.heatmapData;
+  }, [stats]);
 
   return (
     <div className="App">
@@ -62,10 +82,10 @@ function App() {
                 <RatingChart data={stats.byRating} />
               </Grid>
             </Grid>
-{/*             
+            
             <Box sx={{ mb: 3 }}>
-              <CalendarHeatmap heatmapData={stats.heatmapData} />
-            </Box> */}
+              <ActivityCalendar heatmapData={normalizedHeatmapData} />
+            </Box>
             
             {stats.recommendations && stats.recommendations.length > 0 && (
               <Recommendations recommendations={stats.recommendations} />

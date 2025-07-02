@@ -126,10 +126,7 @@ exports.generateHeatmapData = (submissions) => {
     if (!heatmap[dateStr]) {
       heatmap[dateStr] = {
         solved: 0,
-        attempts: 0,
-        date: dateStr,
-        dayOfWeek: date.getDay(),
-        weekOfYear: getWeekOfYear(date)
+        attempts: 0
       };
     }
     const problemId = `${sub.problem.contestId}-${sub.problem.index}`;
