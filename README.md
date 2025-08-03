@@ -11,7 +11,7 @@ Analyze your Codeforces profile, visualize strengths and weaknesses, track your 
 
 🌐 **Frontend:** [https://your-frontend-url.com](https://cf-visual-coach-9yz1-fyoxu2o6o-vivek-c-ks-projects.vercel.app/)  
 🔗 **Backend API:** [https://your-backend-url.com/api/user/tourist](https://cf-visual-coach.onrender.com/api/user/tourist)
-(Hosted on render free version. If not working currently wait for 2 days as the limit resets by then.)
+
 ---
 
 ## 📌 Features
